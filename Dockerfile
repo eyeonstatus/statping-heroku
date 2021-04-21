@@ -14,9 +14,9 @@ VOLUME /app
 ENV IS_DOCKER=true
 ENV SASS=/usr/local/bin/sassc
 ENV STATPING_DIR=/app
-ENV PORT=8080
+#ENV PORT=8080
 
-EXPOSE $PORT
+#EXPOSE $PORT
 
 HEALTHCHECK --interval=60s --timeout=10s --retries=3 CMD curl -s "http://localhost:$PORT/health" | jq -r -e ".online==true"
 
