@@ -20,4 +20,6 @@ ENV STATPING_DIR=/app
 
 HEALTHCHECK --interval=60s --timeout=10s --retries=3 CMD curl -s "http://localhost:$PORT/health" | jq -r -e ".online==true"
 
+ENV POSTGRES_SSLMODE=enable
+
 CMD statping --port $PORT
