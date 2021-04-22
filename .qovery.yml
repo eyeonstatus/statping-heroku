@@ -1,0 +1,15 @@
+---
+application:
+  name: "statping-heroku"
+  project: "eyeonstatus"
+  organization: "QoveryCommunity"
+databases:
+- type: "POSTGRESQL"
+  name: "eyeonstatus_postgresql_qovery"
+  version: "12"
+routers:
+- name: "main-statping-heroku"
+  routes:
+  - application_name: "statping-heroku"
+    paths:
+    - "/*"
